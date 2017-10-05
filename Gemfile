@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'hanami',       '1.0.0'
-gem 'hanami-model', '~> 1.0.0'
+gem 'hanami',       '1.1.0.beta3'
+gem 'hanami-model', '1.1.0.beta3'
 
-gem 'sqlite3'
+gem 'pg'
 
 group :development do
   # Code reloading
