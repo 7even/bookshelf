@@ -7,7 +7,7 @@ describe Web::Controllers::Authors::Create do
       first_name: 'Gerald Jay',
       last_name:  'Sussman',
       books: [
-        { title: 'SICP' }
+        { title: 'SICP', info: { released_in: 1985 } }
       ]
     }
   end
@@ -19,6 +19,7 @@ describe Web::Controllers::Authors::Create do
     author.first_name.must_equal('Gerald Jay')
     author.last_name.must_equal('Sussman')
     author.books.count.must_equal(1)
+    author.books.first.info[:released_in].must_equal(1985)
   end
 
   after do
